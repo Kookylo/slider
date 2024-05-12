@@ -1,0 +1,92 @@
+/**
+ * The CSS class `.slider` is used to create a responsive image slider.
+ * It has the following properties:
+ * - `position: relative`: This sets the position of the slider container relative to its containing element.
+ * - `width: 100%`: This sets the width of the slider container to 100% of its parent container.
+ * - `margin: auto`: This centers the slider container horizontally within its parent container.
+ * - `overflow: hidden`: This prevents any content outside the slider container from being displayed.
+ */
+.slider {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/**
+ * The CSS class `.slider img` is used to style the images within the slider.
+ * It has the following properties:
+ * - `width: 100%`: This sets the width of the images to 100% of the slider container.
+ * - `display: none`: This hides all the images initially.
+ */
+.slider img {
+  width: 100%;
+  display: none;
+}
+
+/**
+ * The CSS class `img.displaySlide` is used to display the selected image within the slider.
+ * It has the following properties:
+ * - `display: block`: This sets the display property of the selected image to block, making it visible.
+ * - `animation-name: fade`: This applies the `fade` animation to the selected image.
+ * - `animation-duration: 1.5s`: This sets the duration of the `fade` animation to 1.5 seconds.
+ */
+img.displaySlide {
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/**
+ * The CSS class `.slider button` is used to create the previous and next buttons for the slider.
+ * It has the following properties:
+ * - `position: absolute`: This sets the position of the buttons relative to the slider container.
+ * - `top: 50%`: This centers the buttons vertically within the slider container.
+ * - `transform: translateY(-50%)`: This moves the buttons up by 50% of their height, effectively centering them vertically.
+ * - `font-size: 2rem`: This sets the font size of the buttons to 2 rem (2 times the base font size).
+ * - `padding: 10px 15px`: This sets the padding of the buttons to 10 pixels on the top and bottom, and 15 pixels on the left and right.
+ * - `background-color: hsla(0, 0%, 0%, 0.5)`: This sets the background color of the buttons to a semi-transparent black.
+ * - `color: white`: This sets the text color of the buttons to white.
+ * - `border: none`: This removes any border around the buttons.
+ * - `cursor: pointer`: This sets the cursor style to a pointer when hovering over the buttons.
+ */
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  padding: 10px 15px;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/**
+ * The CSS class `.prev` is used to style the previous button.
+ * It has the following property:
+ * - `left: 0`: This positions the previous button at the left edge of the slider container.
+ */
+.prev {
+  left: 0;
+}
+
+/**
+ * The CSS class `.next` is used to style the next button.
+ * It has the following property:
+ * - `right: 0`: This positions the next button at the right edge of the slider container.
+ */
+.next {
+  right: 0;
+}
+
+/**
+ * The CSS animation `fade` is used to gradually fade in the selected image.
+ * It has the following properties:
+ * - `from {opacity: .5}`: This sets the initial opacity of the selected image to 50%.
+ * - `to {opacity: 1}`: This sets the final opacity of the selected image to 100%.
+ */
+@keyframes fade {
+  from {opacity: .5;}
+  to {opacity: 1;}
+}
